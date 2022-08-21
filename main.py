@@ -38,6 +38,10 @@ travel_log1 = [
     }
     
 ]
+
+def add_new_Country(country,cities):
+    travel_log1.append({"country": country, "cities_visited": cities, "no_of_visit": 10})
+    print(travel_log1)
    
     
 studentGrades = {}
@@ -60,3 +64,4 @@ for city in travel_log:
     for i  in travel_log[city]:
         print(travel_log[city][i])
 print(travel_log1)
+add_new_Country("Niger",["Damagaran","Madawa","Maradi"])
