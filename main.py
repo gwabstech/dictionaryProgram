@@ -19,7 +19,8 @@ travel_log = {
     }
 }
 
-cities = ["Kaduna", "Kano", "Zamfara", "Katsina", "Kebbi", "Sokoto", "Abuja"]
+cities = ["Kaduna", "Kano", "Zamfara", "Katsina",
+          "Kebbi", "Sokoto", "Abuja", "Niger"]
 
 
 #dictionry in list
