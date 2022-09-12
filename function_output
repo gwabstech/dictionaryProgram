@@ -1,18 +1,17 @@
 
+from ast import Num
+from asyncio.windows_events import NULL
 from turtle import title
 
 
-num1 = int(input("Whats the first number ?: "))
-
-op = input("Please enter +,-,* or / signs only..")
-
-num2 = int(input("Whats the second number ?: "))
+shouldContinue = True
 
 
-def calculate(num1, num2, symbol):
+def calculate(op, num1, num2):
     match op:
         case "+":
             return num1+num2
+
         case "-":
             return num1 - num2
         case "/":
@@ -22,16 +21,16 @@ def calculate(num1, num2, symbol):
         case _:
             print("can not be computed")
 
-print(calculate(num1,num2,op))
-print("")
-option = input("Please type 'y' to continue or n to exit")
 
-match option:
-    case "y" | "Y":
-        num1 = int(input("Whats the first number ?: "))
-        op = input("Please enter +,-,* or / signs only..")
-        num2 = int(input("Whats the second number ?: "))
-        print(calculate(num1, num2, op))
-    case "N | n":
+while shouldContinue:
+    num1 = int(input("Whats the first number ?: "))
+    op = input("Please enter +,-,* or / signs only..")
+    num2 = int(input("Whats the second number ?: "))
+    print(str(calculate(op, num1, num2)))
+    option = input("Please type 'y' to continue or n to exit ")
 
-        print("Done")
+    if option == "y" or option == "Y":
+        shouldContinue = True
+    else:
+        shouldContinue = False
+        print("Good bye ")
