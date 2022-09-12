@@ -1,0 +1,22 @@
+
+num1 = int(input("Whats the first number ?: "))
+
+op = input("Please enter +,-,* or / signs only..")
+
+num2 = int(input("Whats the second number ?: "))
+
+
+def calculate(num1, num2, symbol):
+    match op:
+        case "+":
+            return num1+num2
+        case "-":
+            return num1 - num2
+        case "/":
+            return num1/num2
+        case "*":
+            return num1 * num2
+        case _:
+            print("can not be computed")
+
+print(calculate(num1,num2,op))
