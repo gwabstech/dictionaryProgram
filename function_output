@@ -1,4 +1,7 @@
 
+from turtle import title
+
+
 num1 = int(input("Whats the first number ?: "))
 
 op = input("Please enter +,-,* or / signs only..")
@@ -20,3 +23,15 @@ def calculate(num1, num2, symbol):
             print("can not be computed")
 
 print(calculate(num1,num2,op))
+print("")
+option = input("Please type 'y' to continue or n to exit")
+
+match option:
+    case "y" | "Y":
+        num1 = int(input("Whats the first number ?: "))
+        op = input("Please enter +,-,* or / signs only..")
+        num2 = int(input("Whats the second number ?: "))
+        print(calculate(num1, num2, op))
+    case "N | n":
+
+        print("Done")
