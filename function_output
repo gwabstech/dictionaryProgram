@@ -2,6 +2,7 @@
 from ast import Num
 from asyncio.windows_events import NULL
 from turtle import title
+from art import logo
 
 
 shouldContinue = True
@@ -23,9 +24,11 @@ def calculate(op, num1, num2):
 
 
 while shouldContinue:
-    num1 = int(input("Whats the first number ?: "))
+    print(logo)
+    print("")
+    num1 = float(input("Whats the first number ?: "))
     op = input("pick operation +,-,* or / signs only..")
-    num2 = int(input("Whats the second number ?: "))
+    num2 = float(input("Whats the second number ?: "))
     print(str(calculate(op, num1, num2)))
     option = input("Please type 'y' to continue or n to exit ")
 
