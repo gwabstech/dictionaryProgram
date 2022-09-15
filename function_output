@@ -24,7 +24,7 @@ def calculate(op, num1, num2):
 
 while shouldContinue:
     num1 = int(input("Whats the first number ?: "))
-    op = input("Please enter +,-,* or / signs only..")
+    op = input("pick operation +,-,* or / signs only..")
     num2 = int(input("Whats the second number ?: "))
     print(str(calculate(op, num1, num2)))
     option = input("Please type 'y' to continue or n to exit ")
